@@ -1,0 +1,19 @@
+name: Device support
+description: Report or request support for another Vine model
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Model and firmware
+    validations:
+      required: true
+  - type: textarea
+    id: schema
+    attributes:
+      label: Product schema
+      description: Attach the product-schema export from the account tool. Do not attach the private device settings or raw status dump.
+  - type: textarea
+    id: verification
+    attributes:
+      label: What works?
+      description: List the readings and controls you have actually tested on hardware.

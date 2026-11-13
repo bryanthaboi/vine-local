@@ -1,0 +1,27 @@
+name: Bug report
+description: A connection or thermostat control problem
+body:
+  - type: input
+    id: model
+    attributes:
+      label: Thermostat model and firmware
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Home Assistant and Vine Local versions
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Include steps to reproduce, expected behavior and sanitized error codes.
+    validations:
+      required: true
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics
+      description: Attach integration diagnostics here. Do not attach passwords, local keys, sessions, raw datapoints or Home Assistant tokens.

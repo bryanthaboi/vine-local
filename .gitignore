@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.py[cod]
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+dist/
+*.egg-info/
+.env
+.env.*
+!*.example
+*.local.json
+devices.json
+tinytuya*.json
+snapshot.json
+.DS_Store

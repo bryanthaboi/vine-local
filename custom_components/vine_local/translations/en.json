@@ -1,0 +1,115 @@
+{
+  "title": "Vine Local",
+  "config": {
+    "step": {
+      "reconfigure": {
+        "title": "Update local connection",
+        "data": {
+          "host": "IP address",
+          "local_key": "Local key"
+        },
+        "sections": {
+          "advanced": {
+            "name": "Advanced",
+            "description": "Protocol is detected automatically. Change it only when troubleshooting a connection.",
+            "data": {
+              "protocol_version": "Protocol version"
+            }
+          }
+        },
+        "data_description": {
+          "local_key": "Leave blank to keep the current key."
+        }
+      },
+      "local": {
+        "title": "Connect with a local key",
+        "description": "Enter the device IP, ID and key. Manual setup uses the ST300 profile unless you provide a compatible product schema under Advanced. Account sign-in retrieves the correct schema automatically.",
+        "data": {
+          "name": "Name",
+          "host": "IP address",
+          "device_id": "Device ID",
+          "local_key": "Local key"
+        },
+        "sections": {
+          "advanced": {
+            "name": "Advanced",
+            "description": "Protocol is detected automatically. Change it only when troubleshooting a connection.",
+            "data": {
+              "protocol_version": "Protocol version",
+              "product_schema": "Product schema"
+            },
+            "data_description": {
+              "product_schema": "Optional product_id/schema object exported by the account tool. Required for a model with a different datapoint layout."
+            }
+          }
+        }
+      },
+      "user": {
+        "title": "Connect a Vine thermostat",
+        "menu_options": {
+          "account": "Sign in with Vine (automatic key retrieval)",
+          "local": "Enter a local key manually"
+        }
+      },
+      "account": {
+        "title": "Sign in to Vine",
+        "description": "Your login is sent directly over HTTPS to the Tuya servers used by the Vine Thermostat app, only to authenticate your Vine account and retrieve device connection details. It is never sent to the integration developer. Your password and cloud session are not saved. Only your selected thermostat’s LAN key and product profile are stored in Home Assistant. Normal operation uses your local network.",
+        "data": {
+          "email": "Vine email",
+          "password": "Vine password",
+          "country_code": "Account country calling code",
+          "region": "Account data region"
+        }
+      },
+      "device": {
+        "title": "Choose your thermostat",
+        "data": {
+          "device_id": "Thermostat"
+        },
+        "description": "Select a thermostat from your Vine account. Compatible product schemas are configured automatically. Only the ST300 has been tested on physical hardware."
+      },
+      "connect": {
+        "title": "Connect over the local network",
+        "description": "The local key was retrieved from your Vine account. Check the IP address and connect. If discovery is blocked by a VM or subnet boundary, enter the thermostat’s LAN address.",
+        "data": {
+          "name": "Name",
+          "host": "LAN IP address"
+        },
+        "sections": {
+          "advanced": {
+            "name": "Advanced",
+            "description": "Protocol is detected automatically. Change it only when troubleshooting a connection.",
+            "data": {
+              "protocol_version": "Protocol version"
+            }
+          }
+        }
+      }
+    },
+    "error": {
+      "invalid_key": "Enter a local key containing exactly 16 UTF-8 bytes.",
+      "cannot_connect": "No authenticated status received. Check IP address, local key and protocol version, and close the Vine app or other local clients.",
+      "invalid_auth": "Vine rejected the account credentials. Check the email, password, region and country code.",
+      "cloud_error": "Vine account setup failed ({code}). Check your region or use manual setup. CAPTCHA/MFA challenges are not supported.",
+      "no_devices": "No Vine Wi-Fi thermostats with a local key were found in this account.",
+      "unsupported_schema": "This product schema cannot be mapped safely. See supported devices in the documentation.",
+      "invalid_settings": "Check the local key and product schema. Keys must contain exactly 16 UTF-8 bytes."
+    },
+    "abort": {
+      "already_configured": "This thermostat is already configured.",
+      "reconfigure_successful": "Connection updated.",
+      "invalid_selection": "The selected device is no longer available.",
+      "unsupported_model": "This thermostat uses an unsupported or incomplete schema (product {product_id}). Please report the model and a product schema export so support can be added."
+    }
+  },
+  "selector": {
+    "protocol": {
+      "options": {
+        "auto": "Detect automatically",
+        "3.5": "3.5",
+        "3.4": "3.4",
+        "3.3": "3.3"
+      }
+    }
+  }
+}

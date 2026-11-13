@@ -1,0 +1,16 @@
+{
+  "domain": "vine_local",
+  "name": "Vine Local",
+  "codeowners": [
+    "@bryanthaboi"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/bryanthaboi/vine-local",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/bryanthaboi/vine-local/issues",
+  "requirements": [
+    "tinytuya==1.17.4"
+  ],
+  "version": "0.4.0"
+}

@@ -1,0 +1,582 @@
+{
+  "product_id": "qn4upx5kzja3rg1l",
+  "schema": [
+    {
+      "id": 1,
+      "code": "switch",
+      "mode": "rw",
+      "property": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": 2,
+      "code": "mode",
+      "mode": "rw",
+      "property": {
+        "range": [
+          "off",
+          "cool",
+          "heat",
+          "auto",
+          "emheat"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 3,
+      "code": "work_state",
+      "mode": "ro",
+      "property": {
+        "range": [
+          "idle",
+          "heating",
+          "cooling",
+          "dehumidifier",
+          "em_heating"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 6,
+      "code": "light",
+      "mode": "rw",
+      "property": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": 7,
+      "code": "sound",
+      "mode": "rw",
+      "property": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": 10,
+      "code": "frost",
+      "mode": "rw",
+      "property": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": 11,
+      "code": "valve_check",
+      "mode": "rw",
+      "property": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": 16,
+      "code": "temp_set",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2103",
+        "min": 50,
+        "max": 370,
+        "scale": 1,
+        "step": 5,
+        "type": "value"
+      }
+    },
+    {
+      "id": 17,
+      "code": "temp_set_f",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2109",
+        "min": 420,
+        "max": 1000,
+        "scale": 1,
+        "step": 5,
+        "type": "value"
+      }
+    },
+    {
+      "id": 18,
+      "code": "upper_temp_f",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2109",
+        "min": 50,
+        "max": 99,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 19,
+      "code": "upper_temp",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2103",
+        "min": 10,
+        "max": 40,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 20,
+      "code": "lower_temp_f",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2109",
+        "min": 40,
+        "max": 90,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 21,
+      "code": "capacity_set",
+      "mode": "rw",
+      "property": {
+        "range": [
+          "enter",
+          "exit"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 23,
+      "code": "temp_unit_convert",
+      "mode": "rw",
+      "property": {
+        "range": [
+          "c",
+          "f"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 24,
+      "code": "temp_current",
+      "mode": "ro",
+      "property": {
+        "unit": "\u2103",
+        "min": 0,
+        "max": 50,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 26,
+      "code": "lower_temp",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2103",
+        "min": 0,
+        "max": 30,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 28,
+      "code": "level",
+      "mode": "rw",
+      "property": {
+        "range": [
+          "low",
+          "middle",
+          "high"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 29,
+      "code": "temp_current_f",
+      "mode": "ro",
+      "property": {
+        "unit": "\u2109",
+        "min": -4,
+        "max": 122,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 34,
+      "code": "humidity",
+      "mode": "ro",
+      "property": {
+        "unit": "%",
+        "min": 0,
+        "max": 100,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 40,
+      "code": "child_lock",
+      "mode": "rw",
+      "property": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": 42,
+      "code": "countdown_left",
+      "mode": "ro",
+      "property": {
+        "unit": "min",
+        "min": 0,
+        "max": 1440,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 44,
+      "code": "backlight",
+      "mode": "rw",
+      "property": {
+        "unit": "",
+        "min": 0,
+        "max": 255,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 45,
+      "code": "fault",
+      "mode": "ro",
+      "property": {
+        "label": [
+          "e1",
+          "filter",
+          "low_alert",
+          "high_alert",
+          "humidity_filter"
+        ],
+        "type": "bitmap",
+        "maxlen": 5
+      }
+    },
+    {
+      "id": 52,
+      "code": "backlight_enum",
+      "mode": "rw",
+      "property": {
+        "range": [
+          "20s",
+          "1minute",
+          "3minutes"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 54,
+      "code": "heat_temp_set",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2103",
+        "min": 5,
+        "max": 37,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 55,
+      "code": "heat_temp_set_f",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2109",
+        "min": 42,
+        "max": 99,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 56,
+      "code": "runtime",
+      "mode": "rw",
+      "property": {
+        "unit": "day",
+        "min": 15,
+        "max": 360,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 57,
+      "code": "cool_set_temp",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2103",
+        "min": 5,
+        "max": 37,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 58,
+      "code": "run_mode",
+      "mode": "rw",
+      "property": {
+        "range": [
+          "close",
+          "short",
+          "permanent"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 59,
+      "code": "cool_set_temp_f",
+      "mode": "rw",
+      "property": {
+        "unit": "\u2109",
+        "min": 42,
+        "max": 99,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 64,
+      "code": "fan_mode",
+      "mode": "rw",
+      "property": {
+        "range": [
+          "auto",
+          "on",
+          "circulation",
+          "high"
+        ],
+        "type": "enum"
+      }
+    },
+    {
+      "id": 101,
+      "code": "alarm_switch",
+      "mode": "rw",
+      "property": {
+        "type": "bool"
+      }
+    },
+    {
+      "id": 102,
+      "code": "circu_set",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 103,
+      "code": "change_week_program",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 104,
+      "code": "vacation",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 105,
+      "code": "run_time",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 106,
+      "code": "EnergyData",
+      "mode": "ro",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 107,
+      "code": "avg_temp",
+      "mode": "ro",
+      "property": {
+        "unit": "F",
+        "min": 32,
+        "max": 104,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 108,
+      "code": "avg_heatset",
+      "mode": "ro",
+      "property": {
+        "unit": "F",
+        "min": 32,
+        "max": 104,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 109,
+      "code": "avg_coolset",
+      "mode": "ro",
+      "property": {
+        "unit": "F",
+        "min": 32,
+        "max": 104,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 110,
+      "code": "max_heatrun",
+      "mode": "ro",
+      "property": {
+        "unit": "",
+        "min": 0,
+        "max": 255,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 111,
+      "code": "max_coolrun",
+      "mode": "ro",
+      "property": {
+        "unit": "",
+        "min": 0,
+        "max": 255,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 112,
+      "code": "max_emheatrun",
+      "mode": "ro",
+      "property": {
+        "unit": "",
+        "min": 0,
+        "max": 255,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 113,
+      "code": "max_auxrun",
+      "mode": "ro",
+      "property": {
+        "unit": "",
+        "min": 0,
+        "max": 255,
+        "scale": 0,
+        "step": 1,
+        "type": "value"
+      }
+    },
+    {
+      "id": 114,
+      "code": "nightlight",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 115,
+      "code": "date_time",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 116,
+      "code": "auto_control",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 117,
+      "code": "geo_location",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 118,
+      "code": "saver_time",
+      "mode": "rw",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    },
+    {
+      "id": 120,
+      "code": "set_enable",
+      "mode": "ro",
+      "property": {
+        "type": "raw",
+        "maxlen": 128
+      }
+    }
+  ]
+}
