@@ -17,7 +17,7 @@ def main():
         for path in sorted(component.rglob("*")):
             if (
                 path.is_file()
-                and path.suffix in (".py", ".json")
+                and path.suffix in (".py", ".json", ".png", ".svg")
                 and "__pycache__" not in path.parts
             ):
                 archive.write(path, path.relative_to(root))

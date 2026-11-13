@@ -1,3 +1,5 @@
+<img src="custom_components/vine_local/brand/icon.png" alt="Vine Local" width="96">
+
 # vine local
 
 [![checks](https://github.com/bryanthaboi/vine-local/actions/workflows/validate.yml/badge.svg)](https://github.com/bryanthaboi/vine-local/actions/workflows/validate.yml)
@@ -18,7 +20,7 @@ No Smart Life migration, Tuya developer account or Mac needed.
 ## install
 
 Add `https://github.com/bryanthaboi/vine-local` as a **custom repository**, type
-**Integration**, in HACS. Download **Vine Local**, then restart Home Assistant.
+**Integration**, in HACS (or Marketplace on newer Home Assistant versions). Download **Vine Local**, then restart Home Assistant.
 For the initial preview release, enable beta versions if HACS does not offer it.
 
 [Open this repository in HACS](https://my.home-assistant.io/redirect/hacs_repository/?owner=bryanthaboi&repository=vine-local&category=integration)

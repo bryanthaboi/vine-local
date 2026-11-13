@@ -16,12 +16,14 @@ The build script checks that only integration sources enter the archive:
 python scripts/build_release.py
 ```
 
-[HACS publishing requirements](https://www.hacs.xyz/docs/publish/integration/)
-explain distribution. A [default HACS listing](https://www.hacs.xyz/docs/publish/include/)
-is a separate submission and requires brand assets in Home Assistant's brands
-repository. The current HACS validation skips only that brand-registry check.
-A custom-repository release does not mean the integration has been accepted into
-HACS's default catalog or Home Assistant Core.
+The current [custom integration publishing guide](https://contributors.home-assistant.io/marketplace/guides/integrations/)
+covers the Marketplace and repository layout. A catalog listing is a separate
+submission. A custom-repository release does not mean acceptance into that catalog
+or Home Assistant Core.
+
+Brand images ship locally in the integration's `brand/` folder, as supported since
+Home Assistant 2026.3. They do not need a pull request to the upstream brands
+repository. The HACS validation currently skips its legacy brand-registry check.
 
 Inclusion in [Home Assistant Core](https://developers.home-assistant.io/docs/creating_integration_manifest/)
 is a separate upstream contribution with its own review, library and quality
