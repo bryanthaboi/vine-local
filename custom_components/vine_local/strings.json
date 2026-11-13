@@ -105,10 +105,15 @@
   "selector": {
     "protocol": {
       "options": {
-        "auto": "Detect automatically",
-        "3.5": "3.5",
-        "3.4": "3.4",
-        "3.3": "3.3"
+        "auto": "Detect automatically"
+      }
+    },
+    "region": {
+      "options": {
+        "us": "United States / Americas",
+        "eu": "Europe",
+        "cn": "China",
+        "in": "India"
       }
     }
   }

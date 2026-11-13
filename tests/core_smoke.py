@@ -135,9 +135,11 @@ async def main():
             "host": "192.0.2.1",
             "local_key": "example-key-1234",
             "name": entry.title,
+            "advanced": {},
         }
     )
     assert valid["local_key"] == "example-key-1234"
+    assert valid["advanced"]["protocol_version"] == "auto"
     account_flow = modules["config_flow"].VineConfigFlow()
     account_flow.hass = hass
     selected = {

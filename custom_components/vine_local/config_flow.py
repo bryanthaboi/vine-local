@@ -96,7 +96,13 @@ class VineConfigFlow(ConfigFlow, domain=DOMAIN):
                         )
                     ),
                     vol.Required("country_code", default="1"): str,
-                    vol.Required("region", default="us"): vol.In(["us", "eu", "cn", "in"]),
+                    vol.Required("region", default="us"): selector.SelectSelector(
+                        selector.SelectSelectorConfig(
+                            options=["us", "eu", "cn", "in"],
+                            mode=selector.SelectSelectorMode.DROPDOWN,
+                            translation_key="region",
+                        )
+                    ),
                 }
             ),
         )
@@ -170,9 +176,7 @@ class VineConfigFlow(ConfigFlow, domain=DOMAIN):
                 {
                     vol.Required(CONF_NAME, default=self._selected[CONF_NAME]): str,
                     vol.Required(CONF_HOST, default=self._selected[CONF_HOST]): str,
-                    vol.Optional("advanced", default=dict): advanced_schema(
-                        self._selected[CONF_PROTOCOL]
-                    ),
+                    vol.Required("advanced"): advanced_schema(self._selected[CONF_PROTOCOL]),
                 }
             ),
         )
@@ -208,7 +212,7 @@ class VineConfigFlow(ConfigFlow, domain=DOMAIN):
                     vol.Required(CONF_LOCAL_KEY): selector.TextSelector(
                         selector.TextSelectorConfig(type=selector.TextSelectorType.PASSWORD)
                     ),
-                    vol.Optional("advanced", default=dict): advanced_schema(manual=True),
+                    vol.Required("advanced"): advanced_schema(manual=True),
                 }
             ),
         )
@@ -248,9 +252,7 @@ class VineConfigFlow(ConfigFlow, domain=DOMAIN):
                     vol.Optional(CONF_LOCAL_KEY): selector.TextSelector(
                         selector.TextSelectorConfig(type=selector.TextSelectorType.PASSWORD)
                     ),
-                    vol.Optional("advanced", default=dict): advanced_schema(
-                        entry.data[CONF_PROTOCOL]
-                    ),
+                    vol.Required("advanced"): advanced_schema(entry.data[CONF_PROTOCOL]),
                 }
             ),
         )
